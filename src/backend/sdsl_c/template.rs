@@ -10,7 +10,7 @@ pub fn setup(out_directory: &std::path::PathBuf) -> Result<std::path::PathBuf> {
     log::debug!("Setting up sdsl-c template.");
 
     let archive_path = out_directory.join("sdsl-c-template.zip");
-    let bytes = include_bytes!("sdsl-c-template.zip");
+    let bytes = include_bytes!("sdsl-c-template-v0.2.0.zip");
     {
         let mut file = std::fs::File::create(&archive_path)?;
         file.write_all(bytes)?;
